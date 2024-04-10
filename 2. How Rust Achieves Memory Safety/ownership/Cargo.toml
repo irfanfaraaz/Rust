@@ -1,14 +1,8 @@
-[workspace]
-members = ["*/*/"]
-exclude = [".git/", "target"]
 [package]
-name = "Rust"
+name = "ownership"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-[[bin]]
-name = "your_binary_name"
-path = "src/main.rs"
