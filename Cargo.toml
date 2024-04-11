@@ -1,5 +1,5 @@
 [workspace]
-members = ["*/*/", "2. How Rust Achieves Memory Safety/slices"]
+members = ["*/*/", "2. How Rust Achieves Memory Safety/slices", "3. Building Your Own Data Types/structs_and_impl_blocks"]
 exclude = [".git/", "target"]
 [package]
 name = "Rust"
