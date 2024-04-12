@@ -68,6 +68,4 @@ fn main() {
     println!("{}", cmd2.serialize());
     println!("{}", cmd3.serialize());
     println!("{}", cmd4.serialize());
-
-
 }
