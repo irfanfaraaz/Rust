@@ -1,4 +1,4 @@
-use auth_service::Credentials;
+use auth_service777777777::Credentials;
 
 fn main() {
     let creds = Credentials {
@@ -6,5 +6,5 @@ fn main() {
         password: "password".to_owned(),
     };
 
-    auth_service::authenticate(creds);
+    auth_service777777777::authenticate(creds);
 }
