@@ -55,4 +55,42 @@ impl Paint for House {
     }
 }
 
-fn main() {}
+fn main() {
+    let car = Car {
+        info: VehicleInfo {
+            make: "Toyota".to_string(),
+            model: "Camry".to_string(),
+            year: 2018,
+        },
+    };
+
+    let house = House {};
+
+    let object = create_paintable_object();
+
+    paint_red(&car);
+    paint_red(&house);
+    paint_red(&object);
+    paint_vehicle_red(&car);
+    // paint_vehicle_red(&house); errors coz house does not implement Park
+    // paint_vehicle_red(&object); errors coz house does not implement Park
+}
+
+fn paint_red<T: Paint>(object: &T) {
+    object.paint("red".to_string());
+}
+
+fn paint_red2(object: &impl Paint) {
+    object.paint("red".to_string());
+}
+
+fn paint_vehicle_red<T>(object: &T)
+where
+    T: Paint + Park,
+{
+    object.paint("red".to_string());
+}
+
+fn create_paintable_object() -> impl Paint {
+    House {}
+}
